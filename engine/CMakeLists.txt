@@ -26,7 +26,7 @@ foreach(componentXmlFile ${component_xml_files})
     list(GET componentXmlFile 2 varnamEngineName)
     list(GET componentXmlFile 3 varnamEngineDescription)
     configure_file(varnam.xml.in varnam.${varnamLangCode}.xml)
-    install(FILES varnam.${varnamLangCode}.xml DESTINATION /usr/share/ibus/component)
+    install(FILES varnam.${varnamLangCode}.xml DESTINATION ${IBUS_INSTALL_PREFIX}/share/ibus/component)
 endforeach(componentXmlFile)
 
 set(engine_executable_name ibus-engine-varnam)
